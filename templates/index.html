@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .quote-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            max-width: 600px;
+        }
+        .quote {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #ffdd57;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffe781;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-box">
+        <h1>🌟 Random Quote Generator</h1>
+        <p class="quote">{{ quote }}</p>
+        <form action="/">
+            <button type="submit">New Quote</button>
+        </form>
+    </div>
+</body>
+</html>
