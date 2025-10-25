@@ -1,4 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from flask import Flask, render_template, request
+
 import random
 
 app = Flask(__name__)
@@ -17,6 +19,16 @@ quotes = [
 def home():
     quote = random.choice(quotes)
     return render_template("index.html", quote=quote)
+
+@app.route("/base", methods=["GET", "POST"])
+def base():
+    message = ""
+    if request.method == "POST":
+        if "hello_btn" in request.form:
+            message = "👋 You clicked Hello!"
+        elif "goodbye_btn" in request.form:
+            message = "👋 You clicked Goodbye!"
+    return render_template("base.html", message=message)
 
 if __name__ == "__main__":
     app.run(debug=True)
