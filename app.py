@@ -4,7 +4,8 @@ from flask import Flask, render_template, request
 import random
 
 app = Flask(__name__)
-print("Hello from Windows!")
+#print("Hello from Windows!")
+#disable comment
 
 # List of quotes
 quotes = [
